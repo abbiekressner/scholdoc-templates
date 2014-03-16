@@ -5,6 +5,11 @@ $endif$
 $for(include-before)$
 $include-before$
 $endfor$
+$if(math-macros)$
+<div class="math mathDefinitions" style="visibility: hidden; height: 0px; width 0px;">\[
+$math-macros$
+\]</div>
+$endif$
 $if(title)$
 <header>
 $if(subtitle)$

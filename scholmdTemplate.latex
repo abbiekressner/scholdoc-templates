@@ -195,6 +195,13 @@ $if(lang)$
   \usepackage[$lang$]{babel}
 \fi
 $endif$
+$if(math-macros)$
+
+% Math definitons
+$math-macros$
+% End of math definitions
+
+$endif$
 
 $if(title)$
 \title{$title$}
