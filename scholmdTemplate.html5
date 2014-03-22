@@ -114,12 +114,12 @@ MathJax.Hub.Config({
     }
 });
 </script>
-$if(math)$
-$math$
-$endif$
 $for(include-after)$
 $include-after$
 $endfor$
+$if(math)$
+$math$
+$endif$
 </div>
 </body>
 </html>
