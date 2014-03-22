@@ -74,7 +74,8 @@ MathJax.Hub.Config({
         availableFonts: ["TeX"], 
         preferredFont: "TeX",
         webFont: "TeX",
-        imageFont: "TeX"
+        imageFont: "TeX",
+        EqnChunk: 1000
     }
 });
 </script>
