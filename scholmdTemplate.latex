@@ -125,6 +125,13 @@ $if(floats)$
 \renewcommand{\textfraction}{0.10}	% allow minimal text w. figs
 \renewcommand{\floatpagefraction}{0.85}	% require fuller float pages
 \renewcommand{\dblfloatpagefraction}{0.85}	% require fuller float pages
+% Encourage floats to be placed in the vacinity of where it is defined
+% (in some manuscript styles where figures are collected at the end, the 'h'
+% option might need to be removed by a separate '\floatplacement' call in the
+% 'header-includes' metadata field)
+\floatplacement{figure}{htbp}
+\floatplacement{scholmdAlgorithm}{htbp}
+\floatplacement{table}{htbp}
 $endif$
 $if(subfigures)$
 \usepackage{subfig}
