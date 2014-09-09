@@ -235,11 +235,12 @@ $if(subtitle)$
 $endif$
 \author{$for(author)$$author$$sep$ \and $endfor$}
 \date{$date$}
+
 $for(header-includes)$
 $header-includes$
+
 $endfor$
 $for(latex-header-includes)$
-
 $latex-header-includes$
 $endfor$
 
