@@ -36,6 +36,9 @@ $endif$
 $for(css)$
   <link rel="stylesheet" href="$css$">
 $endfor$
+$for(html-header-includes)$
+  $html-header-includes$
+$endfor$
 $for(header-includes)$
   $header-includes$
 $endfor$

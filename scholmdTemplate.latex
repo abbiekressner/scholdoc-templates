@@ -8,8 +8,8 @@
   \@namedef{opt@#2.sty}{#1}}
 \makeatother
 \dontusepackage{subfigure}
-$for(before-documentclass-includes)$
-$before-documentclass-includes$
+$for(latex-before-documentclass-includes)$
+$latex-before-documentclass-includes$
 $endfor$
 
 
@@ -17,8 +17,8 @@ $endfor$
 %%
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 
-$for(before-packages-includes)$
-$before-packages-includes$
+$for(latex-before-packages-includes)$
+$latex-before-packages-includes$
 $endfor$
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -216,6 +216,9 @@ $if(lang)$
   \usepackage[$lang$]{babel}
 \fi
 $endif$
+$for(latex-after-packages-includes)$
+$latex-after-packages-includes$
+$endfor$
 $if(math-macros)$
 
 % Math definitons
@@ -234,6 +237,10 @@ $endif$
 \date{$date$}
 $for(header-includes)$
 $header-includes$
+$endfor$
+$for(latex-header-includes)$
+
+$latex-header-includes$
 $endfor$
 
 \begin{document}
@@ -280,13 +287,12 @@ $for(include-after)$
 $include-after$
 
 $endfor$
-
-$for(after-body-includes)$
-$after-body-includes$
+$for(latex-after-body-includes)$
+$latex-after-body-includes$
 $endfor$
 
 \end{document}
 
-$for(after-document-includes)$
-$after-document-includes$
+$for(latex-after-document-includes)$
+$latex-after-document-includes$
 $endfor$
