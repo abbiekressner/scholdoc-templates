@@ -8,8 +8,18 @@
   \@namedef{opt@#2.sty}{#1}}
 \makeatother
 \dontusepackage{subfigure}
-%
+$for(before-documentclass-includes)$
+$before-documentclass-includes$
+$endfor$
+
+
+%% ===== Begin LaTeX file ===========================
+%%
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+
+$for(before-packages-includes)$
+$before-packages-includes$
+$endfor$
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -51,11 +61,11 @@ $if(geometry)$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $endif$
 $if(natbib)$
-\usepackage{natbib}
+\usepackage[$for(natbib-options)$$natbib-options$$sep$,$endfor$]{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
 $endif$
 $if(biblatex)$
-\usepackage{biblatex}
+\usepackage[$for(biblatex-options)$$biblatex-options$$sep$,$endfor$]{biblatex}
 $if(biblio-files)$
 \bibliography{$biblio-files$}
 $endif$
@@ -270,4 +280,13 @@ $for(include-after)$
 $include-after$
 
 $endfor$
+
+$for(after-body-includes)$
+$after-body-includes$
+$endfor$
+
 \end{document}
+
+$for(after-document-includes)$
+$after-document-includes$
+$endfor$
