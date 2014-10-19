@@ -1,8 +1,26 @@
-Templates for [pandoc](http://github.com/jgm/pandoc).
+Scholdoc-Template
+===================
+
+### Scholdoc default conversion templates for HTML5, LaTeX, and Docx output
+
+**Current schema version:** [0.1][scholmd-schema]
+
+Scholdoc templates, forked from [`pandoc-templates`](https://github.com/jgm/pandoc-templates).
+
+All Scholdoc-specific templates start with `scholmdTemplate`. Extensions denote the intended output target. Template names ending in `_bodyOnly` gets if you similarly append `_bodyOnly` when specifying Scholdoc output format. For example, specifying `--to=html_bodyOnly`  will use the `scholmdTemplate_bodyOnly.html5` (note that Scholdoc outputs to HTML5 only).
+
+The template syntax follow the [Pandoc template syntax][pandoc-template]. Variables are surrounded by single dollar-signs, like `$VARIABLE_NAME$`. The template also understand a very limited set of control-flow logic, including `$if(VARIABLE)$ ... $else$ ... $endif$`  to check for existence and `$for(VARIABLE)$ ... $endfor$` to iterate over a list.
+
+For more information, consult the [template section][pandoc-template] section of the Pandoc guide.
 
 If you use custom templates, we recommend forking this repository,
 so that you can integrate changes to the default templates in future
-pandoc releases.
+Scholdoc releases.
+
+[pandoc-template]: http://johnmacfarlane.net/pandoc/README.html#templates
+[scholmd-schema]: http://scholarlymarkdown.com/Scholarly-Markdown-HTML-Schema.html
+
+### Licensing
 
 All of the templates in this repository are dual licensed, under both
 the GPL (v2 or higher, same as pandoc) and the BSD 3-clause license
@@ -10,6 +28,7 @@ the GPL (v2 or higher, same as pandoc) and the BSD 3-clause license
 
 ----
 
+Copyright (c) 2014, Tim T.Y. Lin  
 Copyright (c) 2014, John MacFarlane
 
 All rights reserved.
