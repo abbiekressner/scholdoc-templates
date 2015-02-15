@@ -213,7 +213,11 @@ $endif$
 $if(numbersections)$
 \setcounter{secnumdepth}{5}
 $else$
+$if(numberparts-and-chapters)$
 \setcounter{secnumdepth}{0}
+$else$
+\setcounter{secnumdepth}{-2}
+$endif$
 $endif$
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
